@@ -1,0 +1,22 @@
+sources:
+  data:
+    description: essais vis
+    driver: csv
+    parameters:
+      vis:
+        description: toto
+        type: str
+        default: '02'
+
+    args:
+      csv_kwargs: 
+        skiprows: 38
+        sep: '\t'
+        encoding: 'latin1'
+        usecols: [0,1,2,3]
+        decimal: ','
+        header: null
+        engine: 'python'
+        compression: null
+        names: ['temps','force','couple','angle']
+      urlpath: 'https://wiki.space.thales/download/attachments/519787570/M12X28_L00425853_{{ vis }}.txt'        
